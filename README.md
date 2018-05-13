@@ -1,7 +1,12 @@
-# java se 练习 Demo
+# java se学习知识点整理
 
+---
 
-[JAVA实现的雇员管理小程序](src/AssembleDemo2.java)
+# 练习Demo
+
+- [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/Operation.java)
+
+- [JAVA实现的雇员管理小程序](src/AssembleDemo2.java)
 
 
 # 常用集合框架
@@ -23,7 +28,6 @@ HashTable
 Set结构集合类
 HashSet
 TreeSet
-
 
 Queue队列结构的集合类
 Queue接口
