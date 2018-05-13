@@ -1,4 +1,7 @@
+# java se 练习 Demo
 
+
+[JAVA实现的雇员管理小程序](blob/master/src/AssembleDemo2.java)
 
 
 # 常用集合框架
