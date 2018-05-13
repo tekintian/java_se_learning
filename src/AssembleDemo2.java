@@ -3,6 +3,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/**
+ * java 雇员管理小程序
+ * 使用JAVA集合实现了雇员的增删改查操作
+ * @Author Tekintian <tekintian@gmail.com>
+ * @Url http://dev.yunnan.ws
+ */
 public class AssembleDemo2 {
     public static void main(String[] args) {
 
