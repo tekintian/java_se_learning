@@ -11,6 +11,27 @@
 - [java 二分查找法实现](src/cn/tekin/demo/TwoSplitFindDemo.java)
 
 
+
+
+## JAVA学习资料
+
+- [JAVA基础知识.pdf](docs/JAVA基础知识.pdf)
+
+- [Java 面试知识点解析.pdf](docs/Java面试知识点解析.pdf)
+
+- [JAVA中文乱码.doc](docs/JAVA中文乱码.doc)
+
+- [常见数据结构.docx](docs/常见数据结构.docx)
+
+- [常见算法基础题思路简析.doc](docs/常见算法基础题思路简析.doc)
+
+- [几种常见排序算法.docx](docs/几种常见排序算法.docx)
+
+- JAVA 修饰符
+
+![JAVA修饰符](docs/JAVA修饰符.png)
+
+
 # 练习Demo
 
 - [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/Operation.java)
