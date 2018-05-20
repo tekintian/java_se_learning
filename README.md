@@ -2,11 +2,22 @@
 
 ---
 
+
+## [JAVA常用的4种排序方法实现代码](src/cn/tekin/utils/sort)
+
+
+- [java 快速排序法实现](src/cn/tekin/utils/sort/QuickSort.java)
+
+- [java 二分查找法实现](src/cn/tekin/demo/TwoSplitFindDemo.java)
+
+
 # 练习Demo
 
 - [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/Operation.java)
 
 - [JAVA实现的雇员管理小程序](src/AssembleDemo2.java)
+
+
 
 
 # 常用集合框架
@@ -52,3 +63,7 @@ if(a.equals(b)) System.out.println("ok!");
     //结果OK
     
 ```
+
+
+
+[Tekin](http://tekin.yunnan.ws)
