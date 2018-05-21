@@ -1,4 +1,4 @@
-package cn.tekin.demo;
+package cn.tekin.base;
 
 /**
  * 接口使用注意事项：

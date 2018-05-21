@@ -1,4 +1,4 @@
-package cn.tekin.demo;
+package cn.tekin.base;
 
 import cn.tekin.utils.sort.QuickSort;
 

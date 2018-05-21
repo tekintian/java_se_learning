@@ -1,4 +1,4 @@
-package cn.tekin.demo;
+package cn.tekin.base;
 
 /**
  * 抽象类

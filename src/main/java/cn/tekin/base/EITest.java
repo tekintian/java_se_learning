@@ -1,4 +1,4 @@
-package cn.tekin.demo;
+package cn.tekin.base;
 
 /**
  * 继承和实现的区别 演示

@@ -1,3 +1,5 @@
+package cn.tekin.utils.security;
+
 import java.security.MessageDigest;
 
 public class MD5Util {
