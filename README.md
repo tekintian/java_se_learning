@@ -1,10 +1,13 @@
 # java se学习知识点整理
 
 ---
+## 练习Demo
 
+- [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/main/java/cn/tekin/base/Operation.java)
 
-## [JAVA常用的4种排序方法实现代码](src/main/java/cn/tekin/utils/sort)
+- [JAVA实现的雇员管理小程序](src/main/java/AssembleDemo2.java)
 
+- [JAVA常用的4种排序方法实现代码](src/main/java/cn/tekin/utils/sort)
 
 - [java 快速排序法实现](src/main/java/cn/tekin/utils/sort/QuickSort.java)
 - [java两路快排实现代码](src/main/java/cn/tekin/utils/sort/QuickSort2.java)
@@ -13,6 +16,7 @@
 
 - [java 二分查找法实现](src/main/java/cn/tekin/base/TwoSplitFindDemo.java)
 
+- [JAVA泛型演示代码](src/main/java/cn/tekin/base/GenericParadigmMethods.java)
 
 
 ## JAVA学习资料
@@ -38,12 +42,6 @@
 
 - [韩顺平java笔记完整版-基础篇](docs/韩顺平java笔记完整版/1-32基础)
 
-
-# 练习Demo
-
-- [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/main/java/cn/tekin/base/Operation.java)
-
-- [JAVA实现的雇员管理小程序](src/main/java/AssembleDemo2.java)
 
 ---
 ##数据类型
