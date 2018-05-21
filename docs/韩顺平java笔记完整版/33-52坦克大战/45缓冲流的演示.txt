@@ -1,0 +1,48 @@
+/**
+ * 演示缓冲流
+ * 注意：先定义个文件流 在定义一个缓冲流 把文件流对象放入到 缓冲流对象里面
+ *  缓冲流的写的时候不换行，，注意加写的时候加上 "\r\n"
+ *   */
+package com.test6;
+import java.io.*;
+public class Demo12_6 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BufferedReader br=null;
+		BufferedWriter bw=null;
+		try {
+			//先创建FileReader对象
+			FileReader fr=new FileReader("d:\\123.txt");
+			br=new BufferedReader(fr);
+			
+			//创建FileWriter对象
+			FileWriter fw=new FileWriter("e:\\123.txt");
+			bw=new BufferedWriter(fw);
+			//循环读取文件
+			String s="";
+			while((s=br.readLine())!=null)
+			{
+				System.out.println(s);
+				//输出到文件
+				bw.write(s+ "\r\n");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally
+		{
+			try {
+				br.close();
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

@@ -1,0 +1,42 @@
+/**
+ * 功能：演示线程的注意事项
+ * 1:一个对象的线程只能用一次的start方法 否则会报错
+ */
+package com.test1;
+
+public class Dem10_4 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cat cat1=new Cat();
+		cat1.start();
+	//	cat1.start();  会报错 因为只能启东一次
+		Dog dog1=new Dog();
+		Thread t=new Thread(dog1);
+		t.start();
+	//	t.start();   也错误 因为start 方法只能启东一次
+		
+	}
+
+}
+//猫类
+class Cat extends Thread
+{
+	public void run()
+	{
+		System.out.println("11");
+	}
+}
+//狗类
+class Dog implements Runnable
+{
+
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println("22");
+	}
+	
+}

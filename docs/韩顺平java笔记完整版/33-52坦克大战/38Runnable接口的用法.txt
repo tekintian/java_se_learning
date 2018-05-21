@@ -1,0 +1,46 @@
+/**
+ * 用Runnable 类实现一个线程
+ * 1：一个类可以实现一个Runnable 接口 实现 run()方法
+ * 2：用这个类定义的类必须包括在以个 Thread 对象里面然后调用 Thread类中的start方法启动线程
+ */
+package com.test2;
+
+public class Demo10_2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dog dog=new Dog();
+		//创建一个线程对象
+		Thread t=new Thread(dog);  // 必须定义个一线程对象 然后把 实现 Runnable接口的对象包括里面
+		//然后调用对象t的star（）方法
+		t.start();
+		
+	}
+
+}
+class Dog implements Runnable
+{
+	int times=0;
+	//重写run 函数
+	public void run()
+	{
+		while(true)
+		{	//休眠一秒   以毫秒为单位
+			try {
+				// sleep就会让线程进入到阻塞状态，并释放资源
+				Thread.sleep(1000);    //这个线程会自动休息一秒休息过后 线程会自动运行
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			times++;
+			System.out.println("hello,word"+times);
+			if(times==10)
+			{
+				break;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+create database RestaurantDB
+
+
+--创建登陆用户的信息表
+create table clerkInfo
+(
+cleId nvarchar(30)primary key not null,
+cleName nvarchar(30) not null,
+cleSex nchar(1 )check(cleSex in('男','女')) default '女' not null,
+cleAge int check(cleAge>1)not null,
+cleZw nvarchar(30)not null,
+)
+
+
+
+insert into clerkInfo values('1001','李洁','女',25,'主管')
+insert into clerkInfo values('1002','黄梅','女',23,'管理员')
+insert into clerkInfo values('1003','王小毅','男',28,'经理')
+insert into clerkInfo values('1004','钟琴','女',30,'会计')
+insert into clerkInfo values('1005','吴丽','女',24,'收银员')
+insert into clerkInfo values('1006','金秀琴','女',26,'服务员')
+insert into clerkInfo values('1007','陈凤','女',28,'服务员')
+
+
+--创建用户登陆
+create table login
+(
+cleId nvarchar(30) foreign key references clerkInfo(cleId),
+passwd nvarchar(30) not null
+)
+
+
+insert into login values('1001','l001')
+insert into login values('1002','l002')
+insert into login values('1003','l003')
+
+
+drop table login 
+
+
+drop table clerkInfo;
+
+select clerkInfo.cleZw  from  login, clerkInfo  where login.cleId=clerkInfo.cleId and login.cleId=1001  and  login.passwd='m1001'
+

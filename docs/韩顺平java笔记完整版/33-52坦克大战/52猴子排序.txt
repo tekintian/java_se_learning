@@ -1,0 +1,163 @@
+/**
+ * 猴子排队
+ * 1：老猴子用冒泡排序
+ * 2：老猴子用选择排序
+ * 3: 老侯用插入排序
+ */
+package com.test1;
+import java.io.*;
+public class MonkeySort {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//定义一个可以装三只猴子的对象数组
+		int size=3;
+		Monkey []monkeys=new Monkey[size];
+		
+		InputStreamReader isr =new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+		//初始化各个猴子，直接初始化
+		for(int i=0; i<monkeys.length; i++)
+		{
+			System.out.println("请输入第一只猴子的高度");
+			try {
+				String height=br.readLine();
+				monkeys[i]=new Monkey((i+1)+"", Integer.parseInt(height));
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+		}
+		
+		//让老猴子排序
+		Monkey oldMonkey=new Monkey("1000", 8);
+		//老猴子冒泡排序
+		//oldMonkey.bubblesort(monkeys);
+		//老猴子选择排序
+		oldMonkey.selectSort(monkeys);
+		//老猴子选择插入排序
+		oldMonkey.insertSort(monkeys);
+		
+		//验证，输出
+		oldMonkey.show(monkeys);
+	}
+
+}
+//猴子类
+class Monkey
+{
+	private String monkeyId;
+	private int height;
+	public  Monkey(String monkey, int height)
+	{
+		this.monkeyId=monkey;
+		this.height=height;
+	}
+	
+	
+	
+	//插入排序，思想：认为第一个猴子就是有序的，后面的猴子依次的插入到队伍当中
+	public void insertSort(Monkey []monkeys)
+	{
+		//开始排序 任务地0个猴子就是有序的所以把第二个猴子插入到已有的队伍当中
+		for(int i=1; i<monkeys.length; i++)
+		{
+			//记录要插入猴子的身高
+			int insertHeight=monkeys[i].height;
+			String insertNo=monkeys[i].monkeyId;
+			//记录插入猴子前一个猴子的编号
+			int insertIndex=i-1;
+			
+			while(insertIndex>=0&&monkeys[insertIndex].height>insertHeight)
+			{
+				//这时候  insertIndex+1 是要插入的值 以为他的值小于他前面的值，所以把他值变成他后面的值身
+				monkeys[insertIndex+1].height=monkeys[insertIndex].height;
+				monkeys[insertIndex+1].monkeyId=monkeys[insertIndex].monkeyId;
+				insertIndex--;
+			}
+			//这时候  insertIndex+1 是要插入的值的前面的值，变成要插入的值   完成值的交换
+			monkeys[insertIndex+1].height=insertHeight;
+			monkeys[insertIndex+1].monkeyId=insertNo;
+		}
+	}
+	
+	
+	//选择排序
+	public void selectSort(Monkey [] monkeys)
+	{
+		int tempHeight=0;
+		String tempNo="";
+		for(int i=0; i<monkeys.length; i++)
+		{
+			//认为下标为i的猴子是最低的
+			int minHeight=monkeys[i].height;
+			int minIndex=i;
+			
+			//和后面的比较
+			for(int j=i; j<monkeys.length; j++)
+			{
+				if(minHeight>monkeys[j].height)
+				{
+					//修正一下最小值
+					minHeight=monkeys[j].height;
+					//修正下标
+					minIndex=j;
+				}
+			}
+			if(minIndex!=i)
+			{
+				//身高交换
+				tempHeight=monkeys[minIndex].height;
+				monkeys[minIndex].height=monkeys[i].height;
+				monkeys[i].height=tempHeight;
+				//编号交换
+				tempNo=monkeys[minIndex].monkeyId;
+				monkeys[minIndex].monkeyId=monkeys[i].monkeyId;
+				monkeys[i].monkeyId=tempNo;
+			}
+		}
+	}
+	
+	
+	//冒泡排队
+	public void bubblesort(Monkey [] monkeys)
+	{
+		int tempHeight=0;
+		String tempNo="";
+		//冒泡
+		//外层循环的次数是length-1
+		for(int i=0; i<monkeys.length-1; i++)
+		{
+			//内{循环 最后排好的就不用在排了
+			for(int j=0; j<monkeys.length-1-i; j++)
+			{
+				//判断
+				if(monkeys[j].height>monkeys[j+1].height)
+				{
+					//身高交换
+					tempHeight=monkeys[j].height;
+					monkeys[j].height=monkeys[j+1].height;;
+					monkeys[j+1].height=tempHeight;
+					//编号交换
+					tempNo=monkeys[j].monkeyId;
+					monkeys[j].monkeyId=monkeys[j+1].monkeyId;
+					monkeys[j+1].monkeyId=tempNo;
+				}
+			}
+		
+				
+		}
+	}
+	
+	//显示队列
+	public void show(Monkey []monkeys)
+	{
+		for(int i=0; i<monkeys.length; i++)
+		{
+			System.out.println("猴子编号:"+monkeys[i].monkeyId+"身高"+monkeys[i].height);
+		}
+	}
+}

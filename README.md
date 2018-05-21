@@ -34,6 +34,11 @@
 
 ![JAVA修饰符](docs/JAVA修饰符.png)
 
+- [JAVA泛型](docs/JAVA泛型.md)
+
+
+- [韩顺平java笔记完整版-基础篇](docs/韩顺平java笔记完整版/1-32基础)
+
 
 # 练习Demo
 
@@ -66,6 +71,7 @@ JAVA中的基本数据类型有四类八种：整数类型、小数类型、字�
 JAVA从小到大排列顺序：byte、short、char、int、folat、long、double、boolean
 
 JAVA中的引用数据类型有：类(class)、接口(interface)、数组([])。
+
 
 
 ## JAVA中的类型转换：

@@ -1,0 +1,78 @@
+/**
+ * 两个案例同时运行案例
+ * 1:这个两个线程并不是有规律的运行而是有没有规律的交替运行
+ */
+package com.test3;
+
+public class Demo10_3 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Pig pig=new Pig(10);
+		Bird bird=new Bird(10);
+		Thread t1=new Thread(pig);
+		Thread t2=new Thread(bird);
+		t1.start();
+		t2.start();
+	}
+
+}
+//打印
+class Pig implements Runnable
+{
+	int n=0;
+	int times=0;
+	public Pig(int n)
+	{
+		this.n=n;
+	}
+	public void run()
+	{
+		while(true)
+		{
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			times++;
+			System.out.println("猪说我是一个线程，在输出第"+times+"个hello, word");
+			if(times==n)
+			{
+				break;
+			}
+		}
+	}
+}
+//算数学
+class Bird implements Runnable
+{
+	int n=0;
+	int res=0;
+	int times=0;
+	public Bird(int n)
+	{
+		this.n=n;
+	}
+	public void run()
+	{
+		while(true)
+		{
+			try {
+				Thread.sleep(1000);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			res+=(++times);
+			System.out.println("鸟算的当前结果是"+res);
+			if(times==n)
+			{
+				System.out.println("最后结果是"+res);
+				break;
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/桌面/我是书籍/SQL笔记/jar包/sqlserver+jar/msbase.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/桌面/我是书籍/SQL笔记/jar包/sqlserver+jar/mssqlserver.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Administrator/桌面/我是书籍/SQL笔记/jar包/sqlserver+jar/msutil.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

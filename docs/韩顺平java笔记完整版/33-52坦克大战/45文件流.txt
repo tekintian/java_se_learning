@@ -1,0 +1,48 @@
+/**字符流
+ * FileReader和 FileWriter的用法
+ */
+package com.test5;
+import java.io.*;
+public class Demo15_5 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		FileReader fr=null;
+		FileWriter fw=null;
+		
+		try {
+			//创建fr对象
+			fr=new FileReader("d:\\123.txt");
+			//创建fw对象
+			fw=new FileWriter("e:\\123.txt");
+			//创建字符数组读入到内存
+			int n=0;
+			char c[]=new char[1024];
+			//当读取的字符数组不是文件的末尾
+			while((n=fr.read(c))!=-1)
+			{
+			//	String s=new String(c,0,n);
+			//	System.out.print(s);
+				fw.write(c);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally
+		{
+			try {
+				fr.close();
+				fw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	}
+
+}
