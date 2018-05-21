@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'cn.tekin'
+version = '1.0-SNAPSHOT'
+
+description = "my java se learning"
+
+sourceCompatibility = 10
+targetCompatibility = 10
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies{
+
+    compile group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.59'
+
+    //for Unit test
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+
+}
+
+/**
+ *
+ * 打包时包括所有的xml配置文件
+ */
+sourceSets.main.resources.includes = [ "**/*.xml" ]
