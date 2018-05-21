@@ -11,8 +11,7 @@
 - [java三路快排实现代码](src/main/java/cn/tekin/utils/sort/QuickSort3.java)
 
 
-- [java 二分查找法实现](src/main/java/cn/tekin/demo/TwoSplitFindDemo.java)
-
+- [java 二分查找法实现](src/main/java/cn/tekin/base/TwoSplitFindDemo.java)
 
 
 
@@ -42,7 +41,7 @@
 
 # 练习Demo
 
-- [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/main/java/Operation.java)
+- [JAVA算术运算，移位运算DEMO和详细运算过程讲解](src/main/java/cn/tekin/base/Operation.java)
 
 - [JAVA实现的雇员管理小程序](src/main/java/AssembleDemo2.java)
 
